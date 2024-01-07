@@ -3,7 +3,7 @@
 # Bosch BMP180 Sensor Library for STM32F10x/CH32F10x with StdPeriph
 This library provides functions to interface with the BMP180 temperature and pressure sensor on STM32F10x/CH32F10x microcontrollers.
 
-## Sensor Technical Specifications
+## BMP180 Sensor Technical Specifications
 
 - **Interface**: I2C (TWI) or SPI
 - **Supply Voltage**: 1.8V to 3.6V
