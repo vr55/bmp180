@@ -1,8 +1,9 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)![Static Badge](https://img.shields.io/badge/1.0.0-brightgreen?label=version)
+
 # Bosch BMP180 Sensor Library for STM32F10x/CH32F10x
 This library provides functions to interface with the BMP180 temperature and pressure sensor on STM32F10x/CH32F10x microcontrollers.
 
-## Technical Specifications
+## Sensor Technical Specifications
 
 - **Interface**: I2C (TWI) or SPI
 - **Supply Voltage**: 1.8V to 3.6V
