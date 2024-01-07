@@ -1,4 +1,3 @@
-
 #ifndef __BMP180_H_
 #define __BMP180_H_
 
