@@ -12,25 +12,25 @@
 #endif
 
 #define GETBIT(var, bit)	(((var) >> (bit)) & 1)
-#define BMP180_DEFAULT_I2C_TIMEOUT		200
+#define BMP180_DEFAULT_I2C_TIMEOUT	200
 
 #define BMP180_ADDRESS                	(uint8_t)0x77 << 1 	//i2c address
-#define BMP180_CHIP_ID_REG_ADDRESS		(uint8_t)0xD0		//
+#define BMP180_CHIP_ID_REG_ADDRESS	(uint8_t)0xD0		//
 #define BMP180_CHIP_ID                	(uint8_t)0x55  		//id number
 
-#define BMP180_VERSION_REG_ADDRESS		(uint8_t)0xD1
+#define BMP180_VERSION_REG_ADDRESS	(uint8_t)0xD1
 
 
-#define BMP180_CTL_REG_ADDRESS	  		(uint8_t)0xF4		//control register address
+#define BMP180_CTL_REG_ADDRESS	  	(uint8_t)0xF4		//control register address
 
 #define BMP180_SOFT_RESET_REG_ADDRESS	(uint8_t)0xE0
-#define BMP180_SOFT_RESET_REG_VALUE		(uint8_t)0xB6
+#define BMP180_SOFT_RESET_REG_VALUE	(uint8_t)0xB6
 
-#define BMP180_DATA_REG_ADDRESS_MSB		(uint8_t)0xF6
+#define BMP180_DATA_REG_ADDRESS_MSB	(uint8_t)0xF6
 #define BMP180_DATA_REG_ADDRESS_LSB 	(uint8_t)0xF7
 #define BMP180_DATA_REG_ADDRESS_XLSB 	(uint8_t)0xF8
 
-#define BMP180_CALIBRATION_DATA_SIZE	11					//number of calibration registers
+#define BMP180_CALIBRATION_DATA_SIZE	11			//number of calibration registers
 
 #define BMP180_CTL_REG_SCO_BIT_POSITION	5
 
@@ -111,19 +111,19 @@ static uint8_t BMP180_CAL_REG_ADDRESS[] =
 
 
 static	int8_t	BMP180_ReadByte( uint8_t RegAddress );
-static char		BMP180_WriteByte( uint8_t RegAddress, uint8_t ByteToWrite );
+static char	BMP180_WriteByte( uint8_t RegAddress, uint8_t ByteToWrite );
 static int8_t	BMP180_GetChipVersion();
-static void		BMP180_ReadCalibration_Data();
+static void	BMP180_ReadCalibration_Data();
 static	int8_t	BMP180_GetChipId();
 static int32_t	BMP180_GetUncompensatedTemperature();
 static int32_t 	BMP180_GetUncompensatedPressure( enum BMP180_PRESSURE_ACCURACY Accuracy );
-static char		BMP180_Probe();
+static char	BMP180_Probe();
 
-char 			BMP180_Setup( I2C_TypeDef *I2Cx, bmp180_t *bmp180 );
-void			BMP180_Soft_reset();
-int32_t			BMP180_GetTemperature();
-int32_t			BMP180_GetPressure( enum BMP180_PRESSURE_ACCURACY Accuracy  );
-int32_t			BMP180_GetAltitude( uint32_t pressure );
+char 		BMP180_Setup( I2C_TypeDef *I2Cx, bmp180_t *bmp180 );
+void		BMP180_Soft_reset();
+int32_t		BMP180_GetTemperature();
+int32_t		BMP180_GetPressure( enum BMP180_PRESSURE_ACCURACY Accuracy  );
+int32_t		BMP180_GetAltitude( uint32_t pressure );
 
 
 #endif /* BMP180_H_ */
