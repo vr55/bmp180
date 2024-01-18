@@ -14,8 +14,8 @@ This library provides functions to interface with the BMP180 temperature and pre
 - **Temperature Accuracy**: ±2°C
 - **Pressure Accuracy**: ±1hPa
 
-###Usage
-####example
+### Usage
+#### example
 ```C
 #include "bmp180.h"
 int main(void)
