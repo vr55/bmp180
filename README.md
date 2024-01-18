@@ -13,3 +13,32 @@ This library provides functions to interface with the BMP180 temperature and pre
 - **Temperature Measurement Range**: 0°C to 65°C
 - **Temperature Accuracy**: ±2°C
 - **Pressure Accuracy**: ±1hPa
+
+###Usage
+####example
+```C
+#include "bmp180.h"
+int main(void)
+{
+	bmp180_t	bmp180Structure;
+	int32_t		temperature, pressure ;
+	float		altitude;
+
+char result = BMP180_Setup( I2C1, &bmp180Structure );
+
+if( result == 1 )
+{
+  temperature = BMP180_GetTemperature();
+
+  //Pressure Pa
+  pressure = BMP180_GetPressure( BMP180_ACC_ULTRA_HIGH_RES );
+
+  altitude = BMP180_GetAltitude( pressure );
+
+  //Pressure mmHg
+  pressure = pressure * 0.00750062;
+}
+
+while (1);
+}
+```
