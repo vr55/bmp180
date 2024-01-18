@@ -20,9 +20,9 @@ This library provides functions to interface with the BMP180 temperature and pre
 #include "bmp180.h"
 int main(void)
 {
-	bmp180_t	bmp180Structure;
-	int32_t		temperature, pressure ;
-	float		altitude;
+bmp180_t	bmp180Structure;
+int32_t		temperature, pressure ;
+float		altitude;
 
 char result = BMP180_Setup( I2C1, &bmp180Structure );
 
