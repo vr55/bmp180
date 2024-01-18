@@ -14,6 +14,8 @@ This library provides functions to interface with the BMP180 temperature and pre
 - **Temperature Accuracy**: ±2°C
 - **Pressure Accuracy**: ±1hPa
 
+Datasheet: [https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf](https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf)
+
 ### Usage
 #### example
 ```C
